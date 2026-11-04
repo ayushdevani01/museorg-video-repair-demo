@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muse Bottle — Ready for your day.</title>
+<meta name="description" content="Muse Bottle — Ready for your day.">
+<style>
+:root{--bg:#f6f3ec;--ink:#1d1d1f;--muted:#5b5b5e;--accent:#e26a1b;--card:#ffffff}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:960px;margin:0 auto;padding:24px}
+.hero{display:grid;gap:24px;grid-template-columns:1fr;background:var(--card);border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+@media(min-width:720px){.hero{grid-template-columns:1fr 1fr;align-items:center;padding:32px}}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 12px}
+p.lead{color:var(--muted);margin:0 0 20px}
+figure{margin:0}
+img.bottle{width:100%;height:auto;border-radius:12px;background:#eee;display:block}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.btn{appearance:none;border:0;border-radius:999px;background:var(--accent);color:#fff;font-size:16px;font-weight:600;padding:12px 22px;cursor:pointer}
+.btn:focus-visible{outline:3px solid #1d1d1f;outline-offset:2px}
+.confirm{margin-top:16px;border:1px solid #d8d8d8;border-radius:12px;padding:14px 16px;background:#fff8f1}
+footer{color:var(--muted);font-size:13px;margin-top:20px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}} </style>
+</head>
+<body>
+<main class="wrap">
+<div class="hero">
+<div>
+<p class="eyebrow">Muse Bottle</p>
+<h1>Ready for your day.</h1>
+<p class="lead">A clean reusable bottle for everyday use. This preview page stores nothing and sends nothing — updates appear right here.</p>
+<button class="btn" id="updatesBtn" aria-expanded="false" aria-controls="confirm">Get launch updates</button>
+<div class="confirm" id="confirm" role="status" hidden tabindex="-1">
+<p style="margin:0"><strong>You are on the list for this preview.</strong></p>
+<p style="margin:8px 0 0">No form was submitted and nothing left this page. Launch news will appear here when approved.</p>
+</div>
+</div>
+<figure>
+<img class="bottle" src="data:image/jpeg;base64,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" alt="Muse Bottle product artwork — orange reusable bottle" width="640" height="800" fetchpriority="high">
+<figcaption>Muse Bottle — Ready for your day.</figcaption>
+</figure>
+</div>
+<footer>Preview revision 1 · Muse Bottle · No external submissions. Advertising off.</footer>
+</main>
+<script>
+(function(){
+var btn=document.getElementById('updatesBtn');
+var c=document.getElementById('confirm');
+btn.addEventListener('click',function(){
+var show=c.hidden;
+if(show){c.hidden=false;btn.setAttribute('aria-expanded','true');btn.textContent='Got it — hide confirmation';c.focus();}
+else{c.hidden=true;btn.setAttribute('aria-expanded','false');btn.textContent='Get launch updates';btn.focus();}
+});
+})();
+</script>
+</body>
+</html>
